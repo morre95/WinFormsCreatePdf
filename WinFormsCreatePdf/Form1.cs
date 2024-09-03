@@ -70,7 +70,7 @@ namespace WinFormsCreatePdf
             }).GeneratePdf("hello world.pdf");
         }
 
-        void ComposeHeader(IContainer container)
+        private void ComposeHeader(IContainer container)
         {
             container.Row(row =>
             {
@@ -97,7 +97,7 @@ namespace WinFormsCreatePdf
             });
         }
 
-        void ComposeContent(IContainer container)
+        private void ComposeContent(IContainer container)
         {
             container.PaddingVertical(40).Column(column =>
             {
@@ -120,7 +120,7 @@ namespace WinFormsCreatePdf
             });
         }
 
-        void ComposeTable(IContainer container)
+        private void ComposeTable(IContainer container)
         {
             var headerStyle = TextStyle.Default.SemiBold();
 
@@ -161,7 +161,7 @@ namespace WinFormsCreatePdf
             });
         }
 
-        void ComposeComments(IContainer container)
+        private void ComposeComments(IContainer container)
         {
             container.ShowEntire().Background(Colors.Grey.Lighten3).Padding(10).Column(column =>
             {
